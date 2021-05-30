@@ -1,0 +1,74 @@
+ <%-include('partials/header')%>
+    <main id="main">
+
+            <div class="justify" style="margin: 15px;padding: 5px;background-color: #f8f9fa!important;color: #000 !important;font-size: 20px;">
+                <a href="/">
+                    <span class="text-gradient">All users</span>
+                </a>
+                <a href="/secret">
+                    <span class="text-gradient">Secret</span>
+                </a>
+                <a href="/login">
+                    <span class="text-gradient">Login</span>
+                </a>
+            </div>
+            <div class="container">
+            <div><h2 style="text-align: center;">New User</h2></div>
+            <form action="/api/users" method="POST" id="add_user" class="form-horizontal">
+                <div id="new-user">
+                    <div class="form-group row">
+                        <label for="firstName" class="col-sm-2 col-form-label" style="font-weight: bold;">Fisrt Name<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="firstName" value="" placeholder="First Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-sm-2 col-form-label" style="font-weight: bold;">Last Name<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="lastName" value="" class="form-control" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label" style="font-weight: bold;">Email<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="email" value="" placeholder="example@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="mobile" class="col-sm-2 col-form-label" style="font-weight: bold;">Mobile No.<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="mobile" value="" placeholder="mobile no.">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="address" class="col-sm-2 col-form-label" style="font-weight: bold;">Address</label>
+                        <div class="col-sm-10">
+                            <textarea name="address" class="form-control" value="" placeholder="address"></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label" style="font-weight: bold;">Password<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="password" value="" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="cpassword" class="col-sm-2 col-form-label" style="font-weight: bold;">Confirm Password<label style="color: red">*</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="cpassword" value="" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+
+    <%-include('partials/footer')%>
